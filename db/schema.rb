@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120613162551) do
+ActiveRecord::Schema.define(:version => 20120614185328) do
+
+  create_table "academic_articles", :force => true do |t|
+    t.text     "label"
+    t.string   "abstract"
+    t.text     "pmid"
+    t.text     "issue"
+    t.datetime "datetime"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "faculty_members", :force => true do |t|
     t.text     "first_name"
@@ -22,6 +32,12 @@ ActiveRecord::Schema.define(:version => 20120613162551) do
     t.text     "primary_email"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+  end
+
+  create_table "periodicals", :force => true do |t|
+    t.text     "label"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
