@@ -14,12 +14,12 @@ namespace :vivo do
     WHERE{
     ?AcademicArticle1 rdf:type bibo:AcademicArticle .
     ?AcademicArticle1 rdfs:label ?label .
-    ?AcademicArticle1 bibo:abstract ?abstract .
-    ?AcademicArticle1 bibo:issue ?issue .
-    ?AcademicArticle1 bibo:pmid ?pmid .
+    OPTIONAL {?AcademicArticle1 bibo:abstract ?abstract .}
+    OPTIONAL {?AcademicArticle1 bibo:issue ?issue .}
+    OPTIONAL {?AcademicArticle1 bibo:pmid ?pmid .}
     ?AcademicArticle1 vivo:dateTimeValue ?DateTimeValue1 .
     ?DateTimeValue1 rdf:type vivo:DateTimeValue .
-    ?DateTimeValue1 vivo:dateTime ?dateTime .
+    OPTIONAL {?DateTimeValue1 vivo:dateTime ?dateTime .}
     }
     )
     
