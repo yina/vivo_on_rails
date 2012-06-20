@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120614185328) do
+ActiveRecord::Schema.define(:version => 20120618214652) do
 
   create_table "academic_articles", :force => true do |t|
     t.text     "label"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20120614185328) do
     t.datetime "datetime"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "authorships", :force => true do |t|
+    t.integer  "faculty_member_id"
+    t.integer  "academic_article_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "faculty_members", :force => true do |t|
