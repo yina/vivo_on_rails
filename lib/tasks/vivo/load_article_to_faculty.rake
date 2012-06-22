@@ -1,6 +1,6 @@
 namespace :vivo do
   desc "Load connections between faculty and academic articles"
-  task :connect_faculty_to_articles => [:environment] do
+  task :load_article_to_faculty => [:environment] do
     sparql = SPARQL::Client.new("http://172.16.203.132:3030/VIVO/query")
     
     # will need to convert datetime to mysql compatible format
