@@ -1,0 +1,67 @@
+body {
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+#page {
+  text-align: left;
+	width: 800px;
+	margin:0 auto 0 auto;
+	background-color:#FFF;
+}
+#header {
+	height:180px;
+	width:800px;
+	border-bottom:1px solid #555;
+}
+#logo {
+	float: left;
+	border: none;
+}
+#main {
+	width: 800px;
+}
+
+.lst {
+  margin-top:18px;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align:middle;
+}
+
+.lsb {
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  height: 30px;
+  margin-top: 18px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  vertical-align: middle;
+}
+
+#footer {
+	border-top: 1px solid #000;
+	padding:3px;
+}
+
+td p#infotext, td p#infotext a {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color: blue;
+	padding-left: 2px;
+	background: none;
+
+}
+td p#infotext a:hover {
+	text-decoration:none;
+}
+#nyulogo {
+	vertical-align: middle;
+	text-align: right;
+	float: none;
+	left: 0;
+	padding-right: 0;
+	margin-left: 100px;
+}

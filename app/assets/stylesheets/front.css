@@ -1,0 +1,67 @@
+/* @override http://0.0.0.0:3000/stylesheets/front.css?1296189984 */
+p {
+	padding:0;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+a {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #002aff;
+	background: none;
+}
+a:hover {
+	text-decoration:none;
+}
+p#welcome {
+	font-size: 13px;
+	color: #322f30;
+	padding:10px 10px 10px 10px;
+	line-height: 17px;
+}
+p#welcome a {
+	font-size: 13px;
+	color: blue;
+	background: none;
+}
+
+table#search {
+	margin:20px 0 0 20px;
+	width:780px;
+}
+td {
+	padding:0 10px;
+}
+table#examples {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+table#examples td {
+	padding:0;
+	
+}
+td p.examples {
+	font-size:12px;
+	margin-top: 3px;
+}
+
+td p.examples a {
+	background: none;
+	color: blue;
+}
+
+.qtext {
+	color: #246877;
+	font: 16px "Trebuchet MS";
+}
+.watermark {
+	color: #000 !important;
+	font-style: italic !important;
+	font-size: large !important;
+}
+#lastname, #q, #rint, #funded, #qtop {
+  font-size: large;
+}
+
+
+
