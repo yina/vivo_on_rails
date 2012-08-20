@@ -1,2 +1,108 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= javascript_include_tag 'jquery-1.4.2.min' %>
+<%= javascript_include_tag 'jquery.autogrow' %>
+<%= javascript_include_tag 'jquery.watermark.min' %>
+
+<script type='text/javascript'>
+
+$(function () {
+  $.watermark.options.useNative = false;
+  $("#qtop").watermark("MeSH Topic");
+  $("#q").watermark("Title/Abstract Keyword");
+  $("#lastname").watermark("Name");
+  $("#rint").watermark("Faculty Profile Keyword");
+  $("#funded").watermark("Keywords");
+  }
+);
+
+</script>
+
+<%= stylesheet_link_tag 'reset' %>
+<%= stylesheet_link_tag 'common' %>
+<%= stylesheet_link_tag 'front' %>
+
+<div id="page">  <!-- start page div -->
+
+  <div id="header"> <!-- start header div -->
+    <p id="welcome">  <!-- start welcome p -->
+	<b>Welcome to VIVO on Rails.</b> This version is a prototype release. Users may encounter
+	errors or bugs.
+	
+	<p id="welcome">This project is open-source and available on
+	<a href="https://github.com/yina/vivo_on_rails">github.</a> This project demonstrates
+	the use of <a href="http://rubyonrails.org/">Rails</a> for displaying nodes from the VIVO Ontology. 
+	The VIVO Ontology is developed by an NIH funded project to create a controlled vocabulary to describe people and
+	things at universities. The project goal is to facilitate researcher networking by allowing
+	a common vocabulary to index, describe, and search people, entities, and relationships. 
+	
+	<p id="welcome">
+	This application was written by <a href="http://www.nyuinformatics.org/people/faculty/yindalon-aphinyanaphongs">Yin Aphinyanaphongs</a> 
+	at the NYU Center
+	for Health Informatics and Bioinformatics.	This work is funded by the CTSI, NIH grant number XXXXX.
+	</p>
+	
+	
+	
+	</p> 
+    </p> <!-- end welcome p -->
+  </div>  <!-- end header div -->
+ 
+
+  <div id="main">  <!-- start main div -->
+	<table id="search" align="center">
+      <tbody>
+        <tr>
+          <form name="formfar" method="get" action="search/search_by_academic_article_keyword">
+          <td align="right"><span class="qtext"> Find researchers who <em>published</em> on</span></td>
+          <td><input autocomplete="off" class="watermark" id="q" maxlength="5000" size="26" name="q" value="Title/Abstract Keyword" title="">
+            <input name="page" value="1" type="hidden">
+            <input value="Search" name="btnE" type="submit"></td>
+		  </form>
+        </tr>
+
+        <tr>
+          <td align="right"></td>
+          <td valign="top"><table id="examples" class="sm" cellpadding="3" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td colspan="4"><p class="examples"><b>Examples </b></p></td>
+                </tr>
+                <tr>
+                  <td colspan="4"><p class="examples"><i>Title/Abstract Keyword</i> &nbsp; <a href="search/search_by_academic_article_keyword?q=citation">citation</a> &nbsp; <a href="search/search_by_academic_article_keyword?q=cells"> cells</a> &nbsp; <a href="search/search_by_academic_article_keyword?q=medline">medline</a></p>
+                    <br></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+        <tr>
+          <form name="formlast" method="get" action="search/search_by_faculty_member">
+          <td align="right"><span class="qtext"> Find researchers by</span></td>
+          <td><input autocomplete="off" class="watermark" id="lastname" maxlength="5000" size="26" name="q" value="Name" title="">
+            <input name="page" value="1" type="hidden">
+            <input value="Search" name="btnE" type="submit"></td>
+          </form>
+        </tr>
+        <tr>
+          <td align="right"></td>
+          <td valign="top"><table id="examples" class="sm" cellpadding="3" cellspacing="4">
+              <tbody>
+                <tr>
+                  <td colspan="4"><p class="examples"><b>Examples </b></p></td>
+                </tr>
+                <tr>
+                  <td colspan="4"><p class="examples"><i>Name</i> &nbsp; <a href="search/search_by_faculty_member?q=lawrence">lawrence</a> &nbsp; <a href="search/search_by_faculty_member?q=aphinyanaphongs">aphinyanaphongs</a></p>
+                    <br></td>
+                </tr>
+              </tbody>
+            </table></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+  </div> <!-- end main div -->
+
+
+
+
+</div>  <!-- end page div -->

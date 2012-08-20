@@ -1,0 +1,3 @@
+<% @search.facet(:authorship).rows.each do |facet| %>
+	<p><%= facet.value %>, <%= facet.count %></p>
+<% end %>

@@ -7,4 +7,10 @@ class FacultyMember < ActiveRecord::Base
   validates :primary_email, :uniqueness => true
   
   # departments will need another table
+  searchable do
+    text :first_name
+    text :last_name
+  end
+  
+  
 end
