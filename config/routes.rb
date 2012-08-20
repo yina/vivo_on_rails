@@ -1,7 +1,9 @@
 VivoOnRails::Application.routes.draw do
+  get "search/search_by_academic_article_keyword"
+
   get "home/index"
 
-  get "search/search"
+  get "search/search_by_faculty_member"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
