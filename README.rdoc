@@ -32,8 +32,7 @@ to display and index the resulting data.
         rake db:create
         rake db:migrate
 
-2. Be sure your ruby environment is running within jruby. JRuby calls the 
-Jena api to populate the Rails MySQL database with Jena data.
+2. Be sure your ruby environment is running within jruby. JRuby calls the Jena api to populate the Rails MySQL database with Jena data.
 
 3. Now run the jena export:
         rake db:jenaexport
